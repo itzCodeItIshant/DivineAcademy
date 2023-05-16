@@ -1,0 +1,3 @@
+User-Agent: *
+Disallow:
+Sitemap: https://divine-education.com/sitemap.xml
