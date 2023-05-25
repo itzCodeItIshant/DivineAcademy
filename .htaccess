@@ -12,8 +12,3 @@ RewriteCond %{HTTP_HOST} ^divinecoaching.in [NC,OR]
 RewriteCond %{HTTP_HOST} ^www.divinecoaching.in [NC]
 RewriteRule ^(.*)$ https://divine-education.com/index.html [L,R=301,NC] 
 
-RewriteCond %{HTTP_HOST} ^www.divine-education.com [NC]
-RewriteRule ^(.*)$ http://divine-education.com/index.html [L,R=301,NC] 
-
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
