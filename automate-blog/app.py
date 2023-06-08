@@ -3,7 +3,7 @@ import re
 
 def create_html_page():
     # Read the HTML template file
-    with open("automate-blog/template.html", "r", encoding="utf-8") as file:
+    with open("https://divine-education.com/automate-blog/template.html", "r", encoding="utf-8") as file:
         template = file.read()
 
     # Get user input
