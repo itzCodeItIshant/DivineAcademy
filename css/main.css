@@ -3161,4 +3161,26 @@ h6 {
         -o-transition: all 0.3s ease 0s;
         transition: all 0.3s ease 0s; }
 
+
+#slider-container {
+  padding-top: 50px;
+  width: 100%;
+  height: 1000px; /* Adjust the height as needed */
+  overflow: hidden;
+  position: relative;
+}
+.slider-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.single-popular-course {
+  flex: 0 0 100%;
+  transition: transform 0.5s ease-in-out;
+}
+/* Optional: Add additional styles for slide appearance */
+.thumb img {
+  max-width: 100%;
+  height: auto;
+}      
+        
 /*# sourceMappingURL=main.css.map */

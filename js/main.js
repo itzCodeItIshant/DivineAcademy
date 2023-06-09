@@ -260,3 +260,21 @@ $(function() {
 		$('#mc_embed_signup').find('form').ajaxChimp();
 	});
 });
+const sliderContainer = document.getElementById("slider-container");
+const sliderInner = sliderContainer.querySelector(".slider-inner");
+const sliderWidth = sliderContainer.offsetWidth;
+const slides = Array.from(sliderInner.getElementsByClassName("single-popular-course"));
+let currentIndex = 0;
+
+  function changeSlide() {
+    currentIndex++;
+    if (currentIndex >= slides.length) {
+      currentIndex = 0;
+    }
+
+    const newPosition = -currentIndex * sliderWidth;
+    sliderInner.style.transform = `translateX(${newPosition}px)`;
+  }
+
+  setInterval(changeSlide, 2000); // Change slide every 2 seconds
+
