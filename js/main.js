@@ -266,15 +266,21 @@ const sliderWidth = sliderContainer.offsetWidth;
 const slides = Array.from(sliderInner.getElementsByClassName("single-popular-course"));
 let currentIndex = 0;
 
-  function changeSlide() {
+function changeSlide() {
     currentIndex++;
     if (currentIndex >= slides.length) {
       currentIndex = 0;
     }
 
-    const newPosition = -currentIndex * sliderWidth;
-    sliderInner.style.transform = `translateX(${newPosition}px)`;
+const newPosition = -currentIndex * sliderWidth;
+sliderInner.style.transform = `translateX(${newPosition}px)`;
+
+// Adjust the slide duration for mobile devices
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
+const slideDuration = isMobile ? 3000 : 2000;
+setTimeout(changeSlide, slideDuration);
   }
 
-  setInterval(changeSlide, 2000); // Change slide every 2 seconds
+setTimeout(changeSlide, 2000); // Initial slide after 2 seconds
+
 
